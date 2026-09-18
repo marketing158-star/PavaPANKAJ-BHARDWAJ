@@ -1,161 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANKAJ BHARDWAJ</title>
+    
+    <!-- Meta Pixel Base Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    fbq('init', '2149334962320791'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=2149334962320791&ev=PageView&noscript=1"/>
+    </noscript>
 
-<title>Trading Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+        body {
+            background-color: #030804;
+            background: radial-gradient(circle at top, #0b1e12 0%, #030804 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
 
-fbq('init', '2027397264819185');
-fbq('track', 'PageView');
-fbq('track', 'ViewContent');
-</script>
+        /* Outer Frame like Image */
+        .card-container {
+            width: 100%;
+            max-width: 410px;
+            background: #06120a;
+            border: 1px solid #7c6f37;
+            border-radius: 28px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
 
-<style>
-body{
-margin:0;
-font-family:Arial;
-text-align:center;
-color:white;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-}
+        /* Profile Image with Green Border */
+        .profile-box {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            padding: 4px;
+            background: #22c55e;
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+        }
 
-/* TOP BAR */
-.topbar{
-background:#ffd700;
-color:#000;
-padding:12px;
-font-weight:900;
-font-size:17px;
-}
+        .profile-box img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
 
-/* PROFILE */
-.profile{
-margin-top:25px;
-}
-.profile img{
-width:130px;
-height:130px;
-border-radius:50%;
-border:5px solid #ffd700;
-}
+        /* Main Heading (Gold/Cream Color like Photo) */
+        h1 {
+            color: #edd592;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
 
-/* TEXT */
-.title{
-font-size:24px;
-font-weight:900;
-margin-top:10px;
-color:#ffd700;
-}
-.subtitle{
-font-size:16px;
-font-weight:700;
-}
-.counter{
-margin-top:8px;
-font-weight:700;
-}
+        /* Subtitle Green */
+        .sub-name {
+            color: #22c55e;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
 
-/* BOX */
-.box{
-background:rgba(0,0,0,0.4);
-margin:12px 20px;
-padding:12px;
-border-radius:10px;
-font-weight:700;
-}
+        /* Subtitle Badge */
+        .subtitle-badge {
+            color: #94a3b8;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
 
-/* BUTTON */
-.join-btn{
-background:#ffd700;
-color:#000;
-padding:16px;
-margin:20px;
-border-radius:12px;
-font-size:18px;
-font-weight:900;
-cursor:pointer;
-animation:pulse 1.5s infinite;
-}
+        /* Pills / Badges Section */
+        .pills-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
 
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.05)}
-100%{transform:scale(1)}
-}
+        .pill-item {
+            background: #0b1a10;
+            border: 1px solid #7c6f37;
+            color: #edd592;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
 
-/* ADS */
-.ads{
-margin:20px 0;
-}
-.ads a{
-background:black;
-color:#ffd700;
-padding:10px 18px;
-border-radius:20px;
-text-decoration:none;
-font-size:13px;
-}
+        /* Card Box for Features */
+        .feature-box {
+            background: rgba(12, 30, 18, 0.6);
+            border: 1px solid rgba(124, 111, 55, 0.4);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 16px;
+            text-align: left;
+        }
 
-/* DISCLAIMER */
-.disclaimer{
-background:#000;
-color:#ccc;
-font-size:12px;
-padding:14px;
-line-height:1.6;
-}
-</style>
+        .card-title {
+            color: #22c55e;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #e2e8f0;
+        }
+
+        .highlight-banner {
+            background: rgba(250, 204, 21, 0.1);
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 700;
+            color: #facc15;
+        }
+
+        /* Primary Green CTA Button */
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: #22c55e;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 16px;
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            transition: background 0.2s, transform 0.1s;
+            margin-bottom: 8px;
+        }
+
+        .cta-btn:active {
+            transform: scale(0.98);
+            background: #16a34a;
+        }
+
+        .sub-cta-text {
+            color: #94a3b8;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+
+        /* Disclaimer & Quote */
+        .disclaimer-text {
+            color: #64748b;
+            font-size: 11px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .quote-text {
+            color: #94a3b8;
+            font-size: 11px;
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        /* Managed Tag */
+        .managed-tag {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 12px;
+            color: #64748b;
+            font-size: 11px;
+        }
+
+        .managed-link {
+            color: #22c55e;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="profile">
-<img src="profile.jpg" alt="Profile">
-</div>
+    <div class="card-container">
+        <!-- Profile Image -->PANKAJ BHARDWAJ
+        <div class="profile-box">
+            <img src="profile.png" alt="">
+        </div>
 
-<div class="title">Trade With Mohit Agrawal</div>
-<div class="subtitle">Market Insights & Learning</div>
-<div class="counter">👥 2,300+ traders joined today</div>
+        <!-- Headings -->
+        <h1>PANKAJ BHARDWAJ</h1>
+        <div class="sub-name">GROX INTRADAY TRADING™</div>
+        
+        <div class="subtitle-badge">
+            📈 Stock Market Expert • SEBI Registered<br>
+            Trusted Market Updates & Insights
+        </div>
 
-<div class="box">📊 Market Analysis & Learning</div>
-<div class="box">📈 Intraday & Options Discussion</div>
-<div class="box">📚 14+ Years Market Experience</div>
+        <!-- Pills / Feature Badges -->
+        <div class="pills-group">
+            <div class="pill-item">📊 Market Insights</div>
+            <div class="pill-item">🎯 Discipline</div>
+            <div class="pill-item">📈 Strategy</div>
+        </div>
 
-<div class="join-btn" id="joinBtn">JOIN TELEGRAM CHANNEL</div>
+        <!-- Features Box -->
+        <div class="feature-box">
+            <div class="card-title">NIFTY • BANKNIFTY & STOCK OPTIONS</div>
+            <ul class="feature-list">
+                <li class="feature-item">📈 ✅ Get up to 100-300 Points</li>
+                <li class="feature-item">📊 ✅ 80-90% Accuracy</li>
+                <li class="feature-item">🎯 ✅ 3-4 observational Call daily</li>
+                <li class="feature-item">📅 ✅ 3 daily best trade for all</li>
+            </ul>
+            <div class="highlight-banner">
+                ⚡ DAILY FREE DEMO CALL AVAILABLE ✅
+            </div>
+        </div>
 
-<div class="ads">
-<a href="https://t.me/+GZeKfXdd9lIxZTJl">Advertised by elitemarketing.tech</a>
-</div>
+        <!-- Live Analysis Box -->
+        <div class="feature-box" style="text-align: center;">
+            <div class="card-title" style="color: #ffffff;">🎙️ Live Stock Analysis & Intraday Tips</div>
+            <p style="color: #94a3b8; font-size: 12px; line-height: 1.4;">
+                Get real-time Nifty/BankNifty levels, option buying calls, and positional trades. Perfect for beginners & pros.
+            </p>
+        </div>
 
-<script>
-const tgLink="https://t.me/+FbqZCLER6y4zYTBl";
+        <!-- CTA Button -->
+        <button id="telegramLink" class="cta-btn" onclick="trackButtonClick()">
+            🚀 Join Telegram Channel
+        </button>
+        <div class="sub-cta-text">🔒 100% Free • Limited Spots</div>
 
-document.getElementById("joinBtn").addEventListener("click",function(){
-fbq('track','Lead',{ value:10, currency:'INR' });
-window.location.href = tgLink;
-});
-</script>
+        <!-- Disclaimer & Quote -->
+        <p class="disclaimer-text">
+            Educational & informational purpose only. Not SEBI registered investment advice. Markets are subject to risk — please do your own research.
+        </p>
 
-<div class="disclaimer">
-<strong>Disclaimer:</strong><br>
-This community is for educational and informational purposes only.
-We do not provide financial or investment advice.
-Trading in financial markets involves risk.
-Always consult a qualified financial advisor before making any investment decisions.
-</div>
+        <p class="quote-text">
+            📝 "Trade with discipline, follow our levels, and stay consistent in the market."
+        </p>
+
+        <div class="managed-tag">
+            Powered by <a href="https://t.me/+mp524qElHEQ2YWU1" target="_blank" class="managed-link">elite marketing</a>
+        </div>
+    </div>
+
+    <script>
+        var pageLoadTime = Date.now();
+        var telegramUrl = "https://t.me/+B9mVE9GOerkyZTY1";
+
+        function trackButtonClick() {
+            // 1. Permanently track user in localStorage: Agar pehle kabhi bhi click kar chuka hai, to Meta Event fire NAHI hoga
+            if (localStorage.getItem('meta_pixel_fired_once')) {
+                window.location.href = telegramUrl;
+                return;
+            }
+
+            // 2. Anti-Bot check: 1 sec se pehle fast click karne par event skip hoga
+            var currentTime = Date.now();
+            if (currentTime - pageLoadTime < 1000) {
+                localStorage.setItem('meta_pixel_fired_once', 'true');
+                window.location.href = telegramUrl;
+                return;
+            }
+
+            // 3. First-time click: Save in localStorage permanently so duplicate click generates 0 pixel events
+            localStorage.setItem('meta_pixel_fired_once', 'true');
+
+            // Fire Meta Pixel Events (ONLY ONCE PER USER)
+            if (typeof fbq !== 'undefined') {
+                fbq('trackCustom', 'TelegramBtnClick');
+                fbq('track', 'Subscribe');
+            }
+
+            // Visually disable button
+            var btn = document.getElementById('telegramLink');
+            if (btn) {
+                btn.style.pointerEvents = 'none';
+                btn.style.opacity = '0.7';
+            }
+
+            // Redirect delay
+            setTimeout(function() {
+                window.location.href = telegramUrl;
+            }, 300);
+        }
+    </script>
 
 </body>
 </html>
